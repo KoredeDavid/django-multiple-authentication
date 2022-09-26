@@ -5,7 +5,7 @@ Django Multiple Authentication
 Django Multiple Authentication allows you to use either "email" field  or "username" field or any other
 field on your user model for your user authentication.
 
-It works with django's in-built authentication method, so
+It works with django's in-built authentication function no, so
 it works as long as django's authentication function is called.
 
 Requirements
@@ -21,7 +21,8 @@ Installation
 ------------
 
 Django Multiple Authentication can be installed with pip::
-
+   
+    pip install django
     pip install django-multiple-auth
 
 Then, your django project must be configured to use the library.  In ``settings.py``, add  ``multiple_auth`` to
@@ -37,11 +38,7 @@ your list of ``INSTALLED_APPS``:
 Usage
 ============
 Startup up a new project like this if you haven't::
-
-   pip install django
-
-   pip install django-multiple-auth
-
+  
    django-admin startproject sampleproject
 
    cd sampleproject
@@ -53,6 +50,16 @@ Startup up a new project like this if you haven't::
 Create a superuser::
 
     python manage.py createsuperuser --username='test' --email='test@email.com'
+
+Now we tell django what ``AUTHENTICATION_BACKENDS`` we want to use for user authentication.
+Update your ``settings.py`` with this:
+
+.. code-block:: python
+
+    AUTHENTICATION_BACKENDS = (
+        'multiple_auth.backends.MultipleAuthentication',
+        'django.contrib.auth.backends.ModelBackend',
+    )
 
 Add ``MULTIPLE_AUTH`` settings (a dictionary) to your settings.py. Include a key of ``auth_fields`` a value of the list of
 field(s) in your User Model you want to accept for your authentication.
