@@ -3,7 +3,9 @@ Django Multiple Authentication
 ===============================
 
 Django Multiple Authentication allows you to use either "email" field  or "username" field or any other
-field on your user model for your user authentication. It works with django's in-built authentication method, so
+field on your user model for your user authentication.
+
+It works with django's in-built authentication method, so
 it works as long as django's authentication function is called.
 
 Requirements
@@ -26,6 +28,7 @@ Then, your django project must be configured to use the library.  In ``settings.
 your list of ``INSTALLED_APPS``:
 
 .. code-block:: python
+
    INSTALLED_APPS = [
         ...
         "multiple_auth",
@@ -52,32 +55,41 @@ Create a superuser::
     python manage.py createsuperuser --username='test' --email='test@email.com'
 
 Add ``MULTIPLE_AUTH`` settings (a dictionary) to your settings.py. Include a key of ``auth_fields`` a value of the list of
-field(s) in your User Model you want to accept for your authentication. ``You can use one or more fields``. For illustration,
+field(s) in your User Model you want to accept for your authentication.
+
+You can use one or more fields. For illustration,
 we will be using the ``username`` and ``email`` fields. So update your settings like this:
 
 .. code-block:: python
+
     MULTIPLE_AUTH = {
         'auth_fields': ['username', 'email']
     }
 
-You can test it with your login page or api. It works also on the django-admin panel.
+You can test it with your login page or your API. It works also on the django-admin panel.
 
 Note that the the ``auth_fields`` is not just limited two fields you can have one, two or more fields.
 
-* One Field
+One Field:
+
 .. code-block:: python
+
     MULTIPLE_AUTH = {
         'auth_fields': ['id']
     }
 
-* Two Fields
+Two Fields:
+
 .. code-block:: python
+
     MULTIPLE_AUTH = {
         'auth_fields': ['id', 'email']
     }
 
-* Two OR More fields
+Two OR More fields
+
 .. code-block:: python
+
     MULTIPLE_AUTH = {
-        'auth_fields': ['email', 'username', 'id']
+        'auth_fields': ['email', 'username', 'phone_number', 'id', ...]
     }
