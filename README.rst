@@ -23,7 +23,7 @@ Installation
 Django Multiple Authentication can be installed with pip::
    
     pip install django
-    pip install django-multiple-auth
+    pip install django-multiple-authentication
 
 Then, your django project must be configured to use the library.  In ``settings.py``, add  ``multiple_auth`` to
 your list of ``INSTALLED_APPS``:
