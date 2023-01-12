@@ -68,6 +68,9 @@ So update your settings like this:
     }
 
 
+Note
+-----
+
 Note that the the ``auth_fields`` is not just limited two fields you can have one, two or more fields.
 
 One Field:
