@@ -3,16 +3,25 @@
 Usage & Illustrations
 =================
 
+We will go through some illustrations but before we start let's createand user
+
+.. code-block:: console
+
+    python manage.py createsuperuser --username=test --email=test@email.com --password=whatthef*ck
+    
+
+
+
 This page will show how to use the package with:
-    * :ref:`Django Form <django_forms>`
+    * :ref:`Web App <web_app>`
     * :ref:`REST API <rest_api>`
     * :ref:`Django Admin <django_admin>`
 
 
-.. _django_forms:
+.. _web_app:
 
-Django Form
--------------
+Web App
+---------
 
 .. _rest_api:
 
