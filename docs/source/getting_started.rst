@@ -33,6 +33,16 @@ your list of ``INSTALLED_APPS``:
 Project Configuration
 ------------------------
 
+Startup up a new project like this if you haven't::
+
+   django-admin startproject sampleproject
+
+   cd sampleproject
+
+   python manage.py makemigrations
+
+   python manage.py migrate
+
 Add ``multiple_auth`` to your list of ``INSTALLED_APPS`` in your ``settings.py`` :
 
 
