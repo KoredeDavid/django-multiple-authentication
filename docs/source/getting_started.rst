@@ -48,6 +48,8 @@ Add ``multiple_auth`` to your list of ``INSTALLED_APPS`` in your ``settings.py``
 
 .. code-block:: python
 
+    # sampleproject/settings.py
+
     INSTALLED_APPS = [
         ...
         "multiple_auth",
@@ -59,6 +61,8 @@ Update your ``settings.py`` with this:
 
 .. code-block:: python
 
+    # sampleproject/settings.py
+
     AUTHENTICATION_BACKENDS = (
         'multiple_auth.backends.MultipleAuthentication',
     )
@@ -67,25 +71,28 @@ Update your ``settings.py`` with this:
 Next you add ``MULTIPLE_AUTH`` settings (a dictionary) to your ``settings.py``. Include a key of ``auth_fields`` a value of the list of
 field(s) in your User Model you want to accept for your authentication.
 
-You can use one or more fields. For illustration,
-we will be using the ``username`` and ``email`` fields. With this illustration users will be able to login with ``username`` or ``email``
+You can use one or more fields. For example,
+we will be using the ``username`` and ``email`` fields. With this example users will be able to login with ``username`` or ``email``
 So update your settings like this:
 
 .. code-block:: python
+
+    # sampleproject/settings.py
 
     MULTIPLE_AUTH = {
         'auth_fields': ['username', 'email']
     }
 
 
-Note
------
+.. admonition:: NOTE
 
-Note that the the ``auth_fields`` is not just limited two fields you can have one, two or more fields.
+    Note that the the ``auth_fields`` is not just limited two fields. You can have one, two or more fields.
 
 One Field:
 
 .. code-block:: python
+
+    # sampleproject/settings.py
 
     MULTIPLE_AUTH = {
         'auth_fields': ['id']
@@ -95,6 +102,8 @@ One Field:
 Two OR More fields
 
 .. code-block:: python
+
+    # sampleproject/settings.py
 
     MULTIPLE_AUTH = {
         'auth_fields': ['email', 'username', 'phone_number', 'id', ...]
