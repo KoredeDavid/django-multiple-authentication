@@ -7,7 +7,9 @@ We will go through some illustrations but before we start let's creating a user 
 
 .. code-block:: console
 
-    python manage.py createsuperuser --username=test --email=test@email.com --password=whatthef*ck
+    python manage.py createsuperuser --username=test --email=test@email.com
+
+It will bring a prompt to set ``password``. So just set your password and you're done creating a user.
 
 This page will show how to use the package with:
     * :ref:`Web App <web_app>`
@@ -20,12 +22,13 @@ This page will show how to use the package with:
 Web App
 ---------
 
-We are going to use django's in-built authentication app which is already pre-installed for this illustration
-To use the ``auth`` app we need to add it to our project-level urls.py file.
+We are going to use django's in-built authentication app which is already pre-installed for this illustration.
+To use the ``auth`` app we need to add it to our project-level ``urls.py`` file.
 Make sure to add include on the second line. I've chosen to include the auth app at accounts/ but you can use any url pattern you want.
 
 
 .. code-block:: python
+
     # sampleproject/urls.py
     from django.contrib import admin
     from django.urls import path, include # new
@@ -35,13 +38,14 @@ Make sure to add include on the second line. I've chosen to include the auth app
     path("accounts/", include("django.contrib.auth.urls")),  # new
     ]
 
+
 .. admonition:: Remember
 
     You can also use your own custom authentication App.
 
 We should specify where to redirect the user upon a successful login.
 In other words, once a user has logged in, where should they be sent on the site?
-We use the LOGIN_REDIRECT_URL setting to specify this route.
+We use the ``LOGIN_REDIRECT_URL`` setting to specify this route.
 At the bottom of the settings.py file add the following to redirect the user to the homepage.
 
 .. code-block:: python

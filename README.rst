@@ -18,22 +18,38 @@ These are the officially supported python and django package versions.  Other ve
 will probably work.
 
 Installation
-------------
+-------------
 
-Django Multiple Authentication can be installed with pip::
-   
+Django Multiple Authentication can be installed with pip:
+
+.. code-block:: console
+
     pip install django
     pip install django-multiple-authentication
 
-Then, your django project must be configured to use the library.  In ``settings.py``, add  ``multiple_auth`` to
-your list of ``INSTALLED_APPS``:
+Project Configuration
+------------------------
+
+Add ``multiple_auth`` to your list of ``INSTALLED_APPS`` in your ``settings.py`` :
+
 
 .. code-block:: python
 
-   INSTALLED_APPS = [
+    INSTALLED_APPS = [
         ...
         "multiple_auth",
    ]
+
+
+Now we tell django what ``AUTHENTICATION_BACKENDS`` we want to use for user authentication.
+Update your ``settings.py`` with this:
+
+.. code-block:: python
+
+    AUTHENTICATION_BACKENDS = (
+        'multiple_auth.backends.MultipleAuthentication',
+    )
+
 
 Usage
 ============
@@ -85,13 +101,6 @@ One Field:
         'auth_fields': ['id']
     }
 
-Two Fields:
-
-.. code-block:: python
-
-    MULTIPLE_AUTH = {
-        'auth_fields': ['id', 'email']
-    }
 
 Two OR More fields
 
