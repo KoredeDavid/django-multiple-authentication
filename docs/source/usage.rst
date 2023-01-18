@@ -14,7 +14,7 @@ It will bring a prompt to set ``password``. So just set your password and you're
 This page will show how to use the package with:
     * :ref:`Web App <web_app>`
     * :ref:`REST API <rest_api>`
-    * :ref:`Django Admin <django_admin>`
+
 
 
 .. _web_app:
@@ -34,14 +34,14 @@ Make sure to add include on the second line. I've chosen to include the auth app
     from django.urls import path, include # new
 
     urlpatterns = [
-    path("admin/", admin.site.urls),
-    path("accounts/", include("django.contrib.auth.urls")),  # new
+        path("admin/", admin.site.urls),
+        path("accounts/login/", views.LoginView.as_view(template_name='admin/login.html'), name="login") # new
     ]
 
 
 .. admonition:: Remember
 
-    You can also use your own custom authentication App.
+    You can also use your own custom authentication app.
 
 We should specify where to redirect the user upon a successful login.
 In other words, once a user has logged in, where should they be sent on the site?
@@ -78,9 +78,4 @@ Here's a GIF showing a user logging in with his ``email``, ``username`` and ``id
 .. _rest_api:
 
 REST API
--------------
-
-.. _django_admin:
-
-Django Admin
 -------------
