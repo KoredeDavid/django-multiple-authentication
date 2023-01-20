@@ -3,6 +3,27 @@
 Welcome to Django Multiple Authentication's documentation!
 ==========================================================
 
+.. image:: https://jazzband.co/static/img/badge.svg
+   :target: https://jazzband.co/
+   :alt: Jazzband
+.. image:: https://github.com/jazzband/djangorestframework-simplejwt/workflows/Test/badge.svg
+   :target: https://github.com/jazzband/djangorestframework-simplejwt/actions
+   :alt: GitHub Actions
+.. image:: https://codecov.io/gh/jazzband/djangorestframework-simplejwt/branch/master/graph/badge.svg
+  :target: https://codecov.io/gh/jazzband/djangorestframework-simplejwt
+.. image:: https://img.shields.io/pypi/v/djangorestframework-simplejwt.svg
+  :target: https://pypi.python.org/pypi/djangorestframework-simplejwt
+.. image:: https://img.shields.io/pypi/pyversions/djangorestframework-simplejwt.svg
+  :target: https://pypi.python.org/pypi/djangorestframework-simplejwt
+.. image:: https://img.shields.io/pypi/djversions/djangorestframework-simplejwt.svg
+  :target: https://pypi.python.org/pypi/djangorestframework-simplejwt
+.. image:: https://readthedocs.org/projects/django-rest-framework-simplejwt/badge/?version=latest
+  :target: https://django-rest-framework-simplejwt.readthedocs.io/en/latest/
+
+A JSON Web Token authentication plugin for the `Django REST Framework
+<http://www.django-rest-framework.org/>`__.
+
+-------------------------------------------------------------------------------
 
 Django Multiple Authentication allows you to use either email or username field or any other
 field on your user model for your user authentication.
@@ -12,14 +33,7 @@ it works as long as django's authentication function is called.
 
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 3
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   getting_started
+   usage
