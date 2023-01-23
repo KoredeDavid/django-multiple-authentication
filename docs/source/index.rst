@@ -20,15 +20,17 @@ Welcome to Django Multiple Authentication's documentation!
 .. image:: https://readthedocs.org/projects/django-rest-framework-simplejwt/badge/?version=latest
   :target: https://django-rest-framework-simplejwt.readthedocs.io/en/latest/
 
-A JSON Web Token authentication plugin for the `Django REST Framework
-<http://www.django-rest-framework.org/>`__.
-
--------------------------------------------------------------------------------
-
 Django Multiple Authentication allows you to use either email or username field or any other
 field on your user model for your user authentication.
 
-It works with django's in-built authentication function no, so
+-------------------------------------------------------------------------------
+
+Rationale
+----------------
+
+Django's default authentication only accepts username for user authentication.
+So the package allows you to use either email or username or any other stuff on your user table for user authentication.
+It works with django's in-built authentication function, so
 it works as long as django's authentication function is called.
 
 Contents
@@ -39,3 +41,9 @@ Contents
 
    getting_started
    usage
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
