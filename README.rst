@@ -51,7 +51,7 @@ Update your ``settings.py`` with this:
     )
 
 
-Usage
+Usage & Illustration
 ============
 Startup up a new project like this if you haven't::
   
@@ -67,6 +67,8 @@ Create a superuser::
 
     python manage.py createsuperuser --username='test' --email='test@email.com'
 
+ It will bring a prompt to set ``password``. So just set your password and you're done creating a user.
+
 Now we tell django what ``AUTHENTICATION_BACKENDS`` we want to use for user authentication.
 Update your ``settings.py`` with this:
 
@@ -74,7 +76,6 @@ Update your ``settings.py`` with this:
 
     AUTHENTICATION_BACKENDS = (
         'multiple_auth.backends.MultipleAuthentication',
-        'django.contrib.auth.backends.ModelBackend',
     )
 
 Add ``MULTIPLE_AUTH`` settings (a dictionary) to your settings.py. Include a key of ``auth_fields`` a value of the list of
@@ -109,3 +110,15 @@ Two OR More fields
     MULTIPLE_AUTH = {
         'auth_fields': ['email', 'username', 'phone_number', 'id', ...]
     }
+
+
+..  figure:: docs/source/assets/gifs/webapp.gif
+    :alt: A GIF showing a user logging in with his ``email``, ``username`` and ``id``.
+    :align: center
+    :scale: 30 %
+
+    Here's a GIF showing a user logging in with his ``email``, ``username`` and ``id``.
+
+.. admonition:: NOTE
+
+    It also works with **Django Admin** and **REST APIs!!!**
