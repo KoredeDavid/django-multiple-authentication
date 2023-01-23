@@ -31,6 +31,8 @@ field on your user model for your user authentication.
 It works with django's in-built authentication function no, so
 it works as long as django's authentication function is called.
 
+Contents
+------------------------
 
 .. toctree::
    :maxdepth: 3

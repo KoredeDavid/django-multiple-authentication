@@ -1,7 +1,7 @@
-.. _usage:
-
 Usage & Illustration
 =======================
+
+.. _usage:
 
 We will go through an illustration to show how the package works, but before we start let's create a user that we can
 use to test our authentication.
@@ -12,22 +12,9 @@ use to test our authentication.
 
 It will bring a prompt to set ``password``. So just set your password and you're done creating a user.
 
-..
-
-    .. This page will show how the package works with:
-        * :ref:`Web App <web_app>`
-        * :ref:`REST API <rest_api>`
-
-
-
-    .. .. _web_app:
-
-    .. Web App
-    ---------
-
-We are going to use django's in-built authentication app which is already pre-installed for this illustration.
+We are going to use django's in-built authentication app which is already pre-installed.
 To use the ``auth`` app we need to add it to our project-level ``urls.py`` file.
-I've chosen to import the ``auth`` app ``views``.
+I've chosen to import the ``auth`` app ``views`` and we are going to use its ``LoginView``.
 
 
 .. code-block:: python
@@ -71,7 +58,7 @@ Update your the ``auth_fields`` setting within ``MULTIPLE_AUTH`` as follows:
     }
 
 It's time to test! Start your server with ``python manage.py runserver`` in your console and navigate to our login page at ``http://127.0.0.1:8000/accounts/login/``.
-You con now login with either ``email`` or ``username`` or user ``id``. Yipee!!!
+You can now login with either ``email`` or ``username`` or user ``id``. Yipee!!!
 
 
 
@@ -82,22 +69,7 @@ You con now login with either ``email`` or ``username`` or user ``id``. Yipee!!!
 
     Here's a GIF showing a user logging in with his ``email``, ``username`` and ``id``.
 
-.. admonition:: NOTE!
+.. admonition:: NOTE
 
-    It also works with **Django Admin** and **REST Apis**
+    It also works with **Django Admin** and **REST APIs!!!**
 
-
-
-
-..
-
-    .. .. _rest_api:
-
-    .. REST API
-    -------------
-    For this illustration let's install **Django REST Framework (DRF)** which is a toolkit built on top of Django that
-    is used for building API's.
-
-    .. .. code-block:: console
-
-       .. pip install djangorestframework
