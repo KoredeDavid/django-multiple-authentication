@@ -2,9 +2,26 @@
 Django Multiple Authentication
 ===============================
 
+.. image:: https://readthedocs.org/projects/django-multiple-authentication/badge/?version=latest
+    :target: https://django-multiple-authentication.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+
 Django Multiple Authentication allows you to use either email or username field or any other
 field on your user model for your user authentication.
 
+Source code
+ https://github.com/KoredeDavid/django-multiple-authentication/
+
+Documentation
+  https://django-multiple-authentication.readthedocs.io/en/latest/
+
+-------------------------------------------------------------------------------
+
+Rationale
+----------------
+
+Django's default authentication only accepts username for user authentication.
+So the package allows you to use either email or username or any other stuff on your user table for user authentication.
 It works with django's in-built authentication function, so
 it works as long as django's authentication function is called.
 
@@ -53,21 +70,25 @@ Update your ``settings.py`` with this:
 
 Usage & Illustration
 ============
-Startup up a new project like this if you haven't::
-  
-   django-admin startproject sampleproject
+Startup up a new project like this if you haven't
 
-   cd sampleproject
+.. code-block:: console
 
-   python manage.py makemigrations
+    django-admin startproject sampleproject
 
-   python manage.py migrate
+    cd sampleproject
 
-Create a superuser::
+    python manage.py makemigrations
 
-    python manage.py createsuperuser --username='test' --email='test@email.com'
+    python manage.py migrate
 
- It will bring a prompt to set ``password``. So just set your password and you're done creating a user.
+Create a superuser
+
+.. code-block:: console
+
+    python manage.py createsuperuser --username=test --email=test@email.com
+
+It will bring a prompt to set ``password``. So just set your password and you're done creating a user.
 
 Now we tell django what ``AUTHENTICATION_BACKENDS`` we want to use for user authentication.
 Update your ``settings.py`` with this:
