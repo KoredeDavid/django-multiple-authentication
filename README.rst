@@ -5,7 +5,7 @@ Django Multiple Authentication
 Django Multiple Authentication allows you to use either email or username field or any other
 field on your user model for your user authentication.
 
-It works with django's in-built authentication function no, so
+It works with django's in-built authentication function, so
 it works as long as django's authentication function is called.
 
 Requirements
