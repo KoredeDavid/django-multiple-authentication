@@ -70,21 +70,25 @@ Update your ``settings.py`` with this:
 
 Usage & Illustration
 ============
-Startup up a new project like this if you haven't::
-  
-   django-admin startproject sampleproject
+Startup up a new project like this if you haven't
 
-   cd sampleproject
+.. code-block:: console
 
-   python manage.py makemigrations
+    django-admin startproject sampleproject
 
-   python manage.py migrate
+    cd sampleproject
 
-Create a superuser::
+    python manage.py makemigrations
 
-    python manage.py createsuperuser --username='test' --email='test@email.com'
+    python manage.py migrate
 
- It will bring a prompt to set ``password``. So just set your password and you're done creating a user.
+Create a superuser
+
+.. code-block:: console
+
+    python manage.py createsuperuser --username=test --email=test@email.com
+
+It will bring a prompt to set ``password``. So just set your password and you're done creating a user.
 
 Now we tell django what ``AUTHENTICATION_BACKENDS`` we want to use for user authentication.
 Update your ``settings.py`` with this:
