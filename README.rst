@@ -138,7 +138,7 @@ Two OR More fields
     }
 
 
-..  figure:: docs/source/assets/gifs/webapp.gif
+..  figure:: https://raw.githubusercontent.com/KoredeDavid/django-multiple-authentication/development/docs/source/assets/gifs/webapp.gif
     :alt: A GIF showing a user logging in with his ``email``, ``username`` and ``id``.
     :align: center
     :scale: 30 %
