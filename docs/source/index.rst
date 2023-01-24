@@ -3,8 +3,9 @@
 Welcome to Django Multiple Authentication's documentation!
 ==========================================================
 
-.. image:: https://readthedocs.org/projects/django-rest-framework-simplejwt/badge/?version=latest
-  :target: https://django-rest-framework-simplejwt.readthedocs.io/en/latest/
+.. image:: https://readthedocs.org/projects/django-multiple-authentication/badge/?version=latest
+    :target: https://django-multiple-authentication.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
 
 Django Multiple Authentication allows you to use either email or username field or any other
 field on your user model for your user authentication.
