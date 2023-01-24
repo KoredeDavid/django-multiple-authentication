@@ -10,6 +10,12 @@ Welcome to Django Multiple Authentication's documentation!
 Django Multiple Authentication allows you to use either email or username field or any other
 field on your user model for your user authentication.
 
+Source code
+ https://github.com/KoredeDavid/django-multiple-authentication/
+
+Documentation
+  https://django-multiple-authentication.readthedocs.io/en/latest/
+
 -------------------------------------------------------------------------------
 
 Rationale
