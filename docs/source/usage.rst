@@ -65,7 +65,6 @@ You can now login with either ``email`` or ``username`` or user ``id``. Yipee!!!
 ..  figure:: assets/gifs/webapp.gif
     :alt: A GIF showing a user logging in with his ``email``, ``username`` and ``id``.
     :align: center
-    :scale: 30 %
 
     Here's a GIF showing a user logging in with his ``email``, ``username`` and ``id``.
 

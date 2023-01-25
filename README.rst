@@ -2,6 +2,10 @@
 Django Multiple Authentication
 ===============================
 
+.. image:: https://badge.fury.io/py/django-multiple-authentication.svg
+    :target: https://badge.fury.io/py/django-multiple-authentication
+    :alt: PyPi Status
+
 .. image:: https://readthedocs.org/projects/django-multiple-authentication/badge/?version=latest
     :target: https://django-multiple-authentication.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
@@ -69,7 +73,8 @@ Update your ``settings.py`` with this:
 
 
 Usage & Illustration
-============
+=====================
+
 Startup up a new project like this if you haven't
 
 .. code-block:: console
@@ -133,12 +138,11 @@ Two OR More fields
     }
 
 
-..  figure:: docs/source/assets/gifs/webapp.gif
+..  figure:: https://raw.githubusercontent.com/KoredeDavid/django-multiple-authentication/development/docs/source/assets/gifs/webapp.gif
     :alt: A GIF showing a user logging in with his ``email``, ``username`` and ``id``.
     :align: center
-    :scale: 30 %
 
-    Here's a GIF showing a user logging in with his ``email``, ``username`` and ``id``.
+*Here's a GIF showing a user logging in with his ``email``, ``username`` and ``id``.*
 
 .. admonition:: NOTE
 

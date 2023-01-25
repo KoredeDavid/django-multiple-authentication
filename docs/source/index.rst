@@ -3,6 +3,10 @@
 Welcome to Django Multiple Authentication's documentation!
 ==========================================================
 
+.. image:: https://badge.fury.io/py/django-multiple-authentication.svg
+    :target: https://badge.fury.io/py/django-multiple-authentication
+    :alt: PyPi Status
+
 .. image:: https://readthedocs.org/projects/django-multiple-authentication/badge/?version=latest
     :target: https://django-multiple-authentication.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
