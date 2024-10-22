@@ -10,6 +10,10 @@ Django Multiple Authentication
     :target: https://django-multiple-authentication.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
 
+.. image:: https://static.pepy.tech/badge/django-multiple-authentication
+    :target: https://www.pepy.tech/projects/django-multiple-authentication
+    :alt: Downloads
+
 Django Multiple Authentication allows you to use either email or username field or any other
 field on your user model for your user authentication.
 
